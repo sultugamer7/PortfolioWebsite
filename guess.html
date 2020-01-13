@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is a game named Think of a number">
+    <title>Think of a number</title>
+    <!-- Web font from Google font - https://fonts.google.com/?selection.family=Roboto|Ubuntu -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu&display=swap');
+    </style>
+    <!-- Normalize CSS for better cross-browser consistency -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Favicons and manifest -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff0000">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="apple-mobile-web-app-title" content="Sultan's Portfolio">
+    <meta name="application-name" content="Sultan's Portfolio">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#c2e2fe">
+</head>
+
+<body>
+    <div id="myPage">
+        <div id="logo">
+            <div id="navLogo">
+                <!-- Logo created on https://hatchful.shopify.com/ -->
+                <img src="images/logo.jpg" alt="Logo of the portfolio website">
+            </div>
+        </div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html" title="Home"><span class="navText">Home</span></a></li>
+                <li><a href="education.html" title="Education & Technologies"><span class="navText">Education</span></a>
+                </li>
+                <li><a href="contact.html" title="Contact"><span class="navText">Contact</span></a></li>
+                <li><a href="skills.html" title="Skills"><span class="navText">Skills</span></a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1 id="title">Think of a Number</h1>
+        </header>
+        <main>
+            <div class="guessContainer">
+                <div class="guessBox-1" id="description">
+                    <h2>Description</h2>
+                    <p>Think of a number game is all about guessing the number that the computer has thought of.</p>
+                    <h3>How to play:</h3>
+                    <ul>
+                        <li>Guess a number.</li>
+                        <li>Type the guessed number inside the number box.</li>
+                        <li>Press the Guess button.</li>
+                        <li>If your guess is right then you've won the game!</li>
+                        <li>If your guess is not right then you'll get a hint if your guess is too high or too low.
+                        </li>
+                        <li>Consider this hint and guess again until you've won.</li>
+                        <li>Press the Restart button to play again.</li>
+                    </ul>
+                    <h3>Color codes:</h3>
+                    <ul>
+                        <li>White: Guessed too far.</li>
+                        <li>Blue: Guessed within 30, above or below.</li>
+                        <li>Red: Guessed within 10, above or below.</li>
+                        <li>Green: Guessed correctly.</li>
+                    </ul>
+                </div>
+                <div class="guessBox-2">
+                    <!-- form -->
+                    <form method="GET" onsubmit="return false">
+                        <fieldset>
+                            <legend>Please enter a number between 1 and 100</legend>
+                            <p>
+                                <label for="number">Number:</label>
+                                <input type="number" class="formInput guessInput" min="1" max="100" id="number"
+                                    name="number" title="Please enter a number between 1 and 100" required>
+                            </p>
+                            <button type="submit" id="guess" class="btn" title="Guess the number">Guess</button>
+                            <button type="button" id="restart" class="btn" title="Restart the game">Restart</button>
+                        </fieldset>
+                    </form>
+                    <p id="output"></p>
+                </div>
+                <hr class="guessBoxLine">
+            </div>
+        </main>
+        <footer>
+            <div id="footerContainer">
+                <div id="contactDetails" class="footerBox">
+                    <h3>Contact Details</h3>
+                    <p>Phone: +449876543210</p>
+                    <p>E-mail: sultan@gmail.com</p>
+                </div>
+                <div id="socialNetworks" class="footerBox">
+                    <h3>Follow me on social networks</h3>
+                    <nav id="footerNav">
+                        <ul>
+                            <!-- LinkedIn icon by Neil Hainsworth - https://www.iconfinder.com/icons/107159/circle_linkedin_icon -->
+                            <li><a title="LinkedIn" href="https://www.linkedin.com/in/sultan-kazi" target="_blank"
+                                    rel="noopener"><img src="images/linkedin.svg" alt="LinkedIn icon"></a></li>
+                            <!-- Github icon by Ionicons - https://www.iconfinder.com/icons/211904/github_social_icon -->
+                            <li><a title="Github" href="https://github.com/sultugamer7" target="_blank"
+                                    rel="noopener"><img src="images/github.svg" alt="Github icon"></a></li>
+                            <!-- Instagram icon by Picons.me - https://www.iconfinder.com/icons/1161954/instagram_new_icon -->
+                            <li><a title="Instagram" href="https://www.instagram.com/_sultan_kazi/" target="_blank"
+                                    rel="noopener"><img src="images/instagram.svg" alt="Instagram icon"></a>
+                            </li>
+                            <!-- Facebook icon by Stephen Hutchings - https://www.iconfinder.com/icons/216077/circular_facebook_social_icon -->
+                            <li><a title="Facebook" href="https://www.facebook.com/sultan.kazi.144734" target="_blank"
+                                    rel="noopener"><img src="images/facebook.svg" alt="Facebook icon"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="footerLogo" class="footerBox"></div>
+            </div>
+            <h3 id="developer">Developed with ❤️ by Sultan Kazi</h3>
+        </footer>
+    </div>
+    <!-- Service Worker -->
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+    <!-- Think of a number JS -->
+    <script src="scripts/guess.js"></script>
+</body>
+
+</html>

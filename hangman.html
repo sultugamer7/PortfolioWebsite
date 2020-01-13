@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is a game named Hangman">
+    <title>Hangman</title>
+    <!-- Web font from Google font - https://fonts.google.com/?selection.family=Roboto|Ubuntu -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu&display=swap');
+    </style>
+    <!-- Normalize CSS for better cross-browser consistency -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Favicons and manifest -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff0000">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="apple-mobile-web-app-title" content="Sultan's Portfolio">
+    <meta name="application-name" content="Sultan's Portfolio">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#c2e2fe">
+</head>
+
+<body>
+    <div id="myPage">
+        <div id="logo">
+            <div id="navLogo">
+                <!-- Logo created on https://hatchful.shopify.com/ -->
+                <img src="images/logo.jpg" alt="Logo of the portfolio website">
+            </div>
+        </div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html" title="Home"><span class="navText">Home</span></a></li>
+                <li><a href="education.html" title="Education & Technologies"><span class="navText">Education</span></a>
+                </li>
+                <li><a href="contact.html" title="Contact"><span class="navText">Contact</span></a></li>
+                <li><a href="skills.html" title="Skills"><span class="navText">Skills</span></a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1 id="title">Hangman</h1>
+        </header>
+        <main>
+            <div class="hangContainer">
+                <a href="#description">How to play</a>
+                <div class="hangBox-1">
+                    <div class="pic picMiddle hangmanMiddle">
+                        <img src="images/hangmanGame.jpg" id="hangmanImage" alt="Picture of hangman">
+                    </div>
+                    <p id="timer">Timer: 0s</p>
+                </div>
+                <div class="hangBox-2">
+                    <form method="GET">
+                        <div class="buttonCenter">
+                            <button type="button" class="btn" id="start" autofocus>Start</button>
+                        </div>
+                        <p id="puzzle">Press Start to begin...</p>
+                        <p class="keyField">
+                            <input type="text" class="formInput" maxlength="1" placeholder="Letter..."
+                                title="Please enter a letter" id="keyInput" autocomplete="off" required>
+                        </p>
+                        <p id="hangOutput" class="white"></p>
+                    </form>
+                </div>
+                <div class="hangKeys">
+                    <p>Wrong Letters:</p>
+                    <ul id="wrongKeys"></ul>
+                </div>
+                <div class="hangBox-3">
+                    <h1>High Scores:</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Time (in seconds)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="highScore"></tbody>
+                    </table>
+                </div>
+                <div class="hangBox-4" id="description">
+                    <h2>Description</h2>
+                    <p>Hangman game is all about guessing the phrase that the computer has thought of.</p>
+                    <h3>How to play:</h3>
+                    <ul>
+                        <li>Press the Start button to start the game.</li>
+                        <li>You're given a phrase to guess and you've 8 lives.</li>
+                        <li>Guess a letter in the phrase.</li>
+                        <li>Press the guessed letter on your keyboard.</li>
+                        <li>If your guess is right then the corresponding dashes will be replaced with the guessed
+                            letter.</li>
+                        <li>If your guess is wrong then you'll lose a life.</li>
+                        <li>If you've guessed the complete phrase then you've won the game!</li>
+                        <li>If you've lost all the lives then you've lost the game!</li>
+                        <li>Press the Restart button to restart the game.</li>
+                    </ul>
+                    <h3>High Score:</h3>
+                    <p>The top 10 fastest ones to complete the game are listed in the High Score table with their
+                        respective game completion time. Can you be one of them?</p>
+                    <h3>Note:</h3>
+                    <p>Once you've beaten a high score, you'll be asked to add a display name. However, the display name
+                        doesn't accept any spaces in it and it can't be empty.</p>
+                </div>
+                <hr class="hangBoxLine">
+            </div>
+        </main>
+        <footer>
+            <div id="footerContainer">
+                <div id="contactDetails" class="footerBox">
+                    <h3>Contact Details</h3>
+                    <p>Phone: +449876543210</p>
+                    <p>E-mail: sultan@gmail.com</p>
+                </div>
+                <div id="socialNetworks" class="footerBox">
+                    <h3>Follow me on social networks</h3>
+                    <nav id="footerNav">
+                        <ul>
+                            <!-- LinkedIn icon by Neil Hainsworth - https://www.iconfinder.com/icons/107159/circle_linkedin_icon -->
+                            <li><a title="LinkedIn" href="https://www.linkedin.com/in/sultan-kazi" target="_blank"
+                                    rel="noopener"><img src="images/linkedin.svg" alt="LinkedIn icon"></a></li>
+                            <!-- Github icon by Ionicons - https://www.iconfinder.com/icons/211904/github_social_icon -->
+                            <li><a title="Github" href="https://github.com/sultugamer7" target="_blank"
+                                    rel="noopener"><img src="images/github.svg" alt="Github icon"></a></li>
+                            <!-- Instagram icon by Picons.me - https://www.iconfinder.com/icons/1161954/instagram_new_icon -->
+                            <li><a title="Instagram" href="https://www.instagram.com/_sultan_kazi/" target="_blank"
+                                    rel="noopener"><img src="images/instagram.svg" alt="Instagram icon"></a>
+                            </li>
+                            <!-- Facebook icon by Stephen Hutchings - https://www.iconfinder.com/icons/216077/circular_facebook_social_icon -->
+                            <li><a title="Facebook" href="https://www.facebook.com/sultan.kazi.144734" target="_blank"
+                                    rel="noopener"><img src="images/facebook.svg" alt="Facebook icon"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="footerLogo" class="footerBox"></div>
+            </div>
+            <h3 id="developer">Developed with ❤️ by Sultan Kazi</h3>
+        </footer>
+    </div>
+    <!-- Service Worker -->
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+    <!-- Hangman JS -->
+    <script src="scripts/hangman.js"></script>
+</body>
+
+</html>

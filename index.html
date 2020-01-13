@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the home page of a portfolio website of a web developer">
+    <title>Home</title>
+    <!-- Web font from Google font - https://fonts.google.com/?selection.family=Roboto|Ubuntu -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu&display=swap');
+    </style>
+    <!-- Normalize CSS for better cross-browser consistency -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Favicons and manifest -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff0000">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="apple-mobile-web-app-title" content="Sultan's Portfolio">
+    <meta name="application-name" content="Sultan's Portfolio">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#c2e2fe">
+</head>
+
+<body>
+    <div id="myPage">
+        <div id="logo">
+            <div id="navLogo">
+                <!-- Logo created on https://hatchful.shopify.com/ -->
+                <img src="images/logo.jpg" alt="Logo of the portfolio website">
+            </div>
+        </div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html" title="Home"><span class="navText">Home</span></a></li>
+                <li><a href="education.html" title="Education & Technologies"><span class="navText">Education</span></a>
+                </li>
+                <li><a href="contact.html" title="Contact"><span class="navText">Contact</span></a></li>
+                <li><a href="skills.html" title="Skills"><span class="navText">Skills</span></a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1 id="title">About Me</h1>
+        </header>
+        <main>
+            <div id="aboutContainer">
+                <div class="box-1">
+                    <div class="pic">
+                        <picture>
+                            <source
+                                srcset="images/myPic-big-1x.webp, images/myPic-big-2x.webp 2x, images/myPic-big-4x.webp 4x"
+                                media="(min-width: 990px)">
+                            <source
+                                srcset="images/myPic-medium-1x.webp, images/myPic-medium-2x.webp 2x, images/myPic-medium-4x.webp 4x"
+                                media="(min-width: 750px)">
+                            <source
+                                srcset="images/myPic-small-1x.webp, images/myPic-small-2x.webp 2x, images/myPic-small-4x.webp 4x"
+                                media="(min-width: 240px)">
+                            <img src="images/myPic-1x.jpg"
+                                srcset="images/myPic-1x.jpg, images/myPic-2x.jpg 2x, images/myPic-4x.jpg 4x"
+                                alt="Sultan Kazi's picture">
+                        </picture>
+                    </div>
+                </div>
+                <div class="box-2">
+                    <h2>Sultan Kazi</h2>
+                </div>
+                <hr class="boxLine">
+                <div class="box-3">
+                    <h3 class="profile">Professional Profile:</h3>
+                    <p>My name is Sultan Shawkat Kazi. I am from India but currently in the United Kingdom studying my
+                        Masters in Software Engineering at Staffordshire University. I am a fast, committed, and
+                        energetic B.Sc. Computer Science Graduate from the DUBSSC College (permanently affiliated to the
+                        University of Mumbai) with a 9.7/10.00 SGPI. I am strong in design and integration with
+                        intuitive problem-solving skills. I am passionate about implementing and launching new projects
+                        and I have been building apps since 2017. I have the ability to translate business requirements
+                        into technical solutions and I am also skilled in direct development with the creative and
+                        performance-oriented approach. I am looking forward to starting a career as an entry-level web
+                        developer/software engineer with a reputed firm driven by technology.</p>
+                    <h3 class="profile">Hobbies & Interests:</h3>
+                    <p>I have many hobbies and interests as listed below.</p>
+                    <ul class="hobbies">
+                        <li>Problem Solving</li>
+                        <li>Coding</li>
+                        <li>Word Drawing</li>
+                        <li>Photography</li>
+                        <li>Spending time with Family & Friends</li>
+                        <li>Trying out new food</li>
+                        <li>Watching Movies & Anime</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="footerContainer">
+                <div id="contactDetails" class="footerBox">
+                    <h3>Contact Details</h3>
+                    <p>Phone: +449876543210</p>
+                    <p>E-mail: sultan@gmail.com</p>
+                </div>
+                <div id="socialNetworks" class="footerBox">
+                    <h3>Follow me on social networks</h3>
+                    <nav id="footerNav">
+                        <ul>
+                            <!-- LinkedIn icon by Neil Hainsworth - https://www.iconfinder.com/icons/107159/circle_linkedin_icon -->
+                            <li><a title="LinkedIn" href="https://www.linkedin.com/in/sultan-kazi" target="_blank"
+                                    rel="noopener"><img src="images/linkedin.svg" alt="LinkedIn icon"></a></li>
+                            <!-- Github icon by Ionicons - https://www.iconfinder.com/icons/211904/github_social_icon -->
+                            <li><a title="Github" href="https://github.com/sultugamer7" target="_blank"
+                                    rel="noopener"><img src="images/github.svg" alt="Github icon"></a></li>
+                            <!-- Instagram icon by Picons.me - https://www.iconfinder.com/icons/1161954/instagram_new_icon -->
+                            <li><a title="Instagram" href="https://www.instagram.com/_sultan_kazi/" target="_blank"
+                                    rel="noopener"><img src="images/instagram.svg" alt="Instagram icon"></a>
+                            </li>
+                            <!-- Facebook icon by Stephen Hutchings - https://www.iconfinder.com/icons/216077/circular_facebook_social_icon -->
+                            <li><a title="Facebook" href="https://www.facebook.com/sultan.kazi.144734" target="_blank"
+                                    rel="noopener"><img src="images/facebook.svg" alt="Facebook icon"></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="footerLogo" class="footerBox"></div>
+            </div>
+            <h3 id="developer">Developed with ❤️ by Sultan Kazi</h3>
+        </footer>
+    </div>
+    <!-- Service Worker -->
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function () {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function (registration) {
+                        console.log('Service worker registration successful',
+                            registration);
+                    },
+                    function (err) {
+                        console.log('Service worker registration failed', err);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>

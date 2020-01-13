@@ -1,0 +1,22 @@
+{
+    "name": "Sultan's Portfolio",
+    "short_name": "Sultan's Portfolio",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#c2e2fe",
+    "background_color": "#c2e2fe",
+    "start_url": "https://sultan-portfolio.firebaseapp.com/index.html",
+    "display": "standalone",
+    "description": "First PWA attempt of a portfolio web application of a web developer.",
+    "lang": "en"
+}
